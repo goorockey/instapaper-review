@@ -1,0 +1,29 @@
+{
+  "name": "instapaper-review",
+  "version": "0.0.1",
+  "description": "send review email of instapaper archives periodically",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goorockey/instapaper-review.git"
+  },
+  "keywords": [
+    "instapaper",
+    "email",
+    "review"
+  ],
+  "author": "goorockey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goorockey/instapaper-review/issues"
+  },
+  "homepage": "https://github.com/goorockey/instapaper-review",
+  "dependencies": {
+    "cheerio": "^0.16.0",
+    "mongodb": "^1.4.3",
+    "request": "^2.34.0"
+  }
+}
