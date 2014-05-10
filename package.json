@@ -23,7 +23,7 @@
   "homepage": "https://github.com/goorockey/instapaper-review",
   "dependencies": {
     "cheerio": "^0.16.0",
-    "mongodb": "^1.4.3",
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "sugar": "^1.4.1"
   }
 }
