@@ -7,7 +7,10 @@
         <ul id='item-list'>
             <% items.forEach(function(item) { %>
             <li class='item'>
-                <a href='<%= item.link %>'><%= item.title %></a>
+                <span>
+                    <a href='<%= item.link %>'><%= item.title %></a>
+                    <%= item.time %>
+                </span>
             </li>
             <% }) %>
         </ul>
