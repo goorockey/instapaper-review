@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <% if (items.length) { %>
+        <ul id='item-list'>
+            <% items.forEach(function(item) { %>
+            <li class='item'>
+                <a href='<%= item.link %>'><%= item.title %></a>
+            </li>
+            <% }) %>
+        </ul>
+        <% } %>
+    </body>
+</html>

@@ -10,6 +10,7 @@ var send_review = function() {
 };
 
 try {
+    // pattern: sec min hour dayOfMonth month dayOfWeek
     new CronJob(config.review.cron_pattern, send_review, null, true);
 } catch(ex) {
     console.log('CronJob failed:' + ex);

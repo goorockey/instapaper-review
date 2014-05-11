@@ -24,8 +24,9 @@
   "dependencies": {
     "cheerio": "^0.16.0",
     "cron": "^1.0.4",
+    "ejs": "^1.0.0",
     "request": "^2.34.0",
-    "sendgrid": "1.0.0-rc.1.0",
+    "sendgrid": "^1.0.3",
     "sugar": "^1.4.1"
   }
 }
