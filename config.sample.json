@@ -1,0 +1,17 @@
+{
+    "review": {
+        "last_days": 30,
+        "cron_pattern": "0 0 0 15 * *",
+        "template_file": "template.ejs"
+    },
+    "email": {
+        "username": "aaa",
+        "password": "bbb",
+        "to": "123@111.com",
+        "from": "123@213.com"
+    },
+    "instapaper": {
+        "username": "username",
+        "password": "111"
+    }
+}
