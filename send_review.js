@@ -3,7 +3,6 @@ var CronJob = require('cron').CronJob;
 var email = require('./lib/email');
 var instapaper = require('./lib/instapaper');
 var render = require('./lib/render');
-var fs = require('fs');
 
 var send_review = function() {
 
