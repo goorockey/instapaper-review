@@ -7,6 +7,11 @@ var render = require('./lib/render');
 var send_review = function() {
 
     instapaper.get_archives(function(archives) {
+        if (archives.length === 0) {
+            console.log("No archive to send.");
+            return;
+        }
+
         var html = render(archives);
         if (html) email.send(html);
     });
