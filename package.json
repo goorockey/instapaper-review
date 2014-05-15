@@ -4,7 +4,8 @@
   "description": "send review email of instapaper archives periodically",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fire": "node ./send_review.js --fire"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "cheerio": "^0.16.0",
     "cron": "^1.0.4",
     "ejs": "^1.0.0",
+    "optimist": "^0.6.1",
     "request": "^2.34.0",
     "sendgrid": "^1.0.3",
     "sugar": "^1.4.1"

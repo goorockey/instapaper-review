@@ -1,8 +1,11 @@
+#!/usr/bin/env node
+
 var config = require('./config.json');
 var CronJob = require('cron').CronJob;
 var email = require('./lib/email');
 var instapaper = require('./lib/instapaper');
 var render = require('./lib/render');
+var argv = require('optimist').argv;
 
 var send_review = function() {
 
@@ -15,8 +18,12 @@ var send_review = function() {
         var html = render(archives);
         if (html) email.send(html);
     });
-
 };
+
+if (argv.fire) {
+    send_review();
+    return;
+}
 
 try {
     // pattern: sec min hour dayOfMonth month dayOfWeek
