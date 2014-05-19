@@ -7,7 +7,12 @@ var instapaper = require('./lib/instapaper');
 var render = require('./lib/render');
 var argv = require('optimist').argv;
 
+var curTime = function() {
+    return new Date().format('{yyyy}-{MM}-{dd} {HH}:{mm}:{ss}');
+};
+
 var send_review = function() {
+    console.log('Start sending review at ' + curTime());
 
     instapaper.get_archives(function(archives) {
         if (archives.length === 0) {
@@ -15,8 +20,9 @@ var send_review = function() {
             return;
         }
 
-        var html = render(archives);
-        if (html) email.send(html);
+        render(archives, function(html) {
+            if (html) email.send(html);
+        });
     });
 };
 
@@ -27,6 +33,7 @@ if (argv.fire) {
 
 try {
     // pattern: sec min hour dayOfMonth month dayOfWeek
+    console.log("Crob of sending review is running at " + curTime());
     new CronJob(config.review.cron_pattern, send_review, null, true);
 } catch(ex) {
     console.log('CronJob failed:' + ex);
