@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/goorockey/instapaper-review",
   "dependencies": {
-    "cheerio": "^0.16.0",
+    "cheerio": "^0.20.0",
     "cron": "^1.0.4",
     "ejs": "^1.0.0",
     "optimist": "^0.6.1",
     "request": "^2.34.0",
-    "sendgrid": "^1.0.3",
+    "sendgrid": "^3.0.0",
     "sugar": "^1.4.1"
   }
 }
